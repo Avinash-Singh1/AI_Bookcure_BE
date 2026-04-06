@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/db');
 const chatRoutes = require('./routes/chat.routes');
+const searchRoutes = require('./routes/search.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -33,6 +34,7 @@ app.use(express.json({ limit: '1mb' }));
 
 // Routes
 app.use('/api', chatRoutes);
+app.use('/api/search', searchRoutes);
 
 // Health check
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
