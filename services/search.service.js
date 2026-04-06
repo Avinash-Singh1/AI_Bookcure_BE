@@ -47,10 +47,13 @@ OUTPUT FORMAT (strict JSON):
   "symptoms": ["extracted symptom 1", "extracted symptom 2"],
   "diseases": ["possible disease 1", "possible disease 2"],
   "specializations": ["Specialization 1", "Specialization 2"],
+  "alternativeSpecializations": ["Related Specialization 1", "Related Specialization 2"],
   "urgency": "low|medium|high|emergency",
   "isNaturalLanguage": true,
   "searchTerms": ["optimized", "search", "keywords"]
-}`;
+}
+
+NOTE: alternativeSpecializations should contain 2-3 related specializations that could also handle the patient's concern, different from the primary specializations. For example, if primary is "Cardiologist", alternatives could be ["General Physician", "Pulmonologist"].`;
 
 // In-memory cache with TTL
 const cache = new Map();
@@ -113,6 +116,7 @@ async function extractMedicalIntent(query) {
       symptoms: [],
       diseases: [],
       specializations: [],
+      alternativeSpecializations: [],
       urgency: 'low',
       isNaturalLanguage: false,
       searchTerms: [query],
@@ -124,6 +128,7 @@ async function extractMedicalIntent(query) {
     symptoms: parsed.symptoms || [],
     diseases: parsed.diseases || [],
     specializations: parsed.specializations || [],
+    alternativeSpecializations: parsed.alternativeSpecializations || [],
     urgency: parsed.urgency || 'low',
     isNaturalLanguage: parsed.isNaturalLanguage !== false,
     searchTerms: parsed.searchTerms || [],
