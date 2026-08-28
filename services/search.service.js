@@ -18,23 +18,24 @@ RULES:
 6. If the query is not medical (e.g., "pizza near me"), set isNaturalLanguage to false
 
 SPECIALIZATION MAPPING GUIDELINES:
-- Fever, cold, cough, general illness → General Physician
-- Chest pain, heart problems, BP → Cardiologist
-- Skin issues, hair fall, acne → Dermatologist
-- Bone/joint pain, fracture → Orthopedic
-- Eye problems → Ophthalmologist
-- Children's health → Pediatrician
-- Women's health, periods, pregnancy → Gynecologist
-- Cancer, tumor → Oncologist
-- Brain, nerves, seizure, stroke → Neurologist
-- Lung, breathing → Pulmonologist
-- Ear, nose, throat → ENT
-- Stomach, liver, digestion → Gastroenterologist
-- Kidney, urinary → Nephrologist / Urologist
-- Diabetes, thyroid, hormones → Endocrinologist
-- Mental health → Psychiatrist
-- Dental → Dentist
-- Surgery-related → General Surgeon
+- Fever, cold, cough, flu, weakness, general illness → General Physician
+- Chest pain, heart problems, high BP, palpitation → Cardiologist
+- Skin issues, rash, itching, acne, allergy, eczema, hair fall → Dermatologist
+- Eye rashes, eye redness, itching in eyes, blurry vision, eye pain → Ophthalmologist, Dermatologist
+- Bone/joint pain, back pain, knee pain, fracture, spine issue → Orthopedic Surgeon, Physiotherapist
+- Children's health, fever in child, pediatric issues → Pediatrician
+- Women's health, periods, pregnancy, PCOS, fertility → Gynecologist
+- Cancer, tumor, lump → Oncologist
+- Brain, head pain, migraine, nerves, seizure, stroke → Neurologist
+- Lung, breathing difficulty, asthma, bronchitis → Pulmonologist
+- Ear, nose, throat, sinusitis, ear pain, tonsils → ENT Specialist
+- Stomach, liver, digestion, acidity, vomiting, abdominal pain → Gastroenterologist
+- Kidney, urinary infection, burning urination → Nephrologist, Urologist
+- Diabetes, thyroid, hormones, sugar level → Endocrinologist
+- Mental health, anxiety, depression, insomnia → Psychiatrist
+- Dental, toothache, cavity, gum pain, root canal → Dentist
+- Surgery-related, hernia, appendix → General Surgeon
+- Physical rehab, muscle strain, back stiffness → Physiotherapist
 
 URGENCY LEVELS:
 - "low": Minor symptoms, cosmetic issues, chronic conditions
